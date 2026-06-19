@@ -4,6 +4,16 @@
 
 IBM-StorySync-Engine is an AI narrative continuity companion built around IBM Cloud services. It provides a spoiler-safe experience by restricting AI context to only the portion of the story you have watched so far, while still allowing semantic search, scene retrieval, and generative assistants.
 
+
+
+
+<img width="1600" height="920" alt="WhatsApp Image 2026-06-19 at 7 10 56 PM" src="https://github.com/user-attachments/assets/8c7df5b8-ee70-451f-9d8e-d0728fa84455" />
+
+
+
+
+
+
 ## Features
 
 - **Spoiler Shield**: hard-locks the AI context window to the specific timeline of the currently watched video.
