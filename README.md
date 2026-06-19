@@ -1,24 +1,36 @@
 # IBM-StorySync-Engine
 
-Overview
---------
-IBM-StorySync-Engine is a local toolkit integrating IBM cloud services for narrative generation, retrieval, and storage. It contains example tooling and scripts to connect to IBM Cloud services (watsonx.ai, NLU, Cloudant) to process and generate story content.
+## Overview
 
-Features
---------
-- Content ingestion and parsing
-- Generation via Watson/watsonx.ai
-- Retrieval and lightweight persistence (Cloudant example)
-- Test connection scripts and examples
+IBM-StorySync-Engine is an AI narrative continuity companion built around IBM Cloud services. It provides a spoiler-safe experience by restricting AI context to only the portion of the story you have watched so far, while still allowing semantic search, scene retrieval, and generative assistants.
 
-Tech Stack
-----------
+## Features
+
+- **Spoiler Shield**: hard-locks the AI context window to the specific timeline of the currently watched video.
+- **Semantic Search**: powered by IBM dense embeddings to find scenes by meaning, not just keywords.
+- **Intent Routing**: detects whether the user needs a focused answer or a broader lore recap.
+- **Metadata Entity Boosting**: Watson NLU extracts characters, locations, and organizations to improve relevance.
+- Content ingestion, parsing, and rich narrative generation.
+- Connection checks and examples for IBM watsonx.ai, Watson NLU, and Cloudant.
+
+## Tech Stack
+
 - Python 3.9+
-- IBM Cloud SDKs (watsonx.ai, NLU, Cloudant)
+- IBM watsonx.ai
+- IBM Watson NLU
+- IBM Cloudant
+- Uvicorn / FastAPI (for the app server)
 
-Setup
------
-1. Create a Python virtual environment and install dependencies:
+## Setup
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/AbooHazza/IBM-StorySync-Engine.git
+cd IBM-StorySync-Engine
+```
+
+2. Create a virtual environment and install dependencies:
 
 ```bash
 python -m venv venv
@@ -26,23 +38,41 @@ source venv/bin/activate
 pip install -r NarrativeAI/requirements.txt
 ```
 
-2. Copy `.env.example` to `.env` and fill in your IBM credentials:
+3. Set up environment variables:
 
 ```bash
-cp NarrativeAI/.env.example .env
-# Edit .env and add your API keys and URLs
+cp NarrativeAI/.env.example NarrativeAI/.env
 ```
 
-3. Run tests / connection checks:
+Open `NarrativeAI/.env` and populate your IBM credentials.
+
+4. Populate data and start the server:
 
 ```bash
-python NarrativeAI/test_connections.py
+python NarrativeAI/data_parser.py
+uvicorn NarrativeAI.app:app --host 0.0.0.0 --port 8000 --reload
 ```
 
-Disclaimer
-----------
-This repository is public-ready, but it requires personal API keys and credentials to function. Do NOT commit your `.env` file or any API keys. Populate the `.env` file locally with your own IBM Cloud API keys (for example `IBM_CLOUD_API_KEY`, `WATSONX_URL`, etc.).
+5. Open the app in your browser:
 
-License
--------
-Add an appropriate license file if you plan to open-source this project.
+```bash
+http://localhost:8000
+```
+
+## Environment Variables
+
+The repository uses `NarrativeAI/.env.example` as a template. Update the copied `.env` file with your personal API keys and service URLs.
+
+## Security Disclaimer
+
+This repository is intended for public use, but it requires your own IBM Cloud API keys and credentials. Do NOT commit your `.env` file or any secret values to GitHub.
+
+## Notes
+
+- Keep all sensitive credentials out of version control.
+- Use the `.gitignore` file already included in the repository to block `venv/`, `__pycache__/`, `.env`, `data.json`, and other local artifacts.
+- If you add new secret files, add them to `.gitignore` immediately.
+
+## License
+
+Add an appropriate license file if you want to open-source this project.
