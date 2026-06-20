@@ -3,7 +3,8 @@
 
 
 
-<img width="472" height="214" alt="IBM_Logo_Transparent" src="https://github.com/user-attachments/assets/ed49ac61-7bae-456a-aa4b-4825096256ab" />
+<img width="472" height="214" alt="IBM_Logo_Transparent" src="https://github.com/user-attachments/assets/ed49ac61-7bae-456a-aa4b-4825096256ab" />           <img width="200" height="200"                              alt="water_droplets_icon_transparent" src="https://github.com/user-attachments/assets/b0ef9097-007a-4de3-be1f-b1a755dff6d2" />
+
 
 
 
