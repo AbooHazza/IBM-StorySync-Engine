@@ -12,7 +12,7 @@
 
 ## Overview
 
-IBM-StorySync-Engine is an AI narrative continuity companion built around IBM Cloud services. It provides a spoiler-safe experience by restricting AI context to only the portion of the story you have watched so far, while still allowing semantic search, scene retrieval, and generative assistants.
+ AI narrative continuity companion built around IBM Cloud services. It provides a spoiler-safe experience by restricting AI context to only the portion of the story you have watched so far, while still allowing semantic search, scene retrieval, and generative assistants.
 
 
 
