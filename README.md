@@ -93,6 +93,3 @@ This repository is intended for public use, but it requires your own IBM Cloud A
 - Use the `.gitignore` file already included in the repository to block `venv/`, `__pycache__/`, `.env`, `data.json`, and other local artifacts.
 - If you add new secret files, add them to `.gitignore` immediately.
 
-## License
-
-Add an appropriate license file if you want to open-source this project.
