@@ -3,7 +3,7 @@
 
 
 
-<img width="672" height="314" alt="IBM_Logo_Transparent" src="https://github.com/user-attachments/assets/ed49ac61-7bae-456a-aa4b-4825096256ab" />
+<img width="472" height="214" alt="IBM_Logo_Transparent" src="https://github.com/user-attachments/assets/ed49ac61-7bae-456a-aa4b-4825096256ab" />
 
 
 
